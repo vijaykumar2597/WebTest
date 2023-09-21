@@ -1,4 +1,4 @@
-package com.webtest;
+ package com.webtest;
 
 import java.util.List;
 
@@ -50,7 +50,7 @@ public class WebController {
 		 
 		 
 	     @GetMapping(path="/check")
-	 public String check(@RequestParam("userName") String name1,@RequestParam("password") String password) {
+	 public String check(@RequestParam String name1,@RequestParam("password") String password) {
 			 if(name1.equalsIgnoreCase("VijayKumar") && password.equalsIgnoreCase("1234")) {
 				 return "Authorizied person";
 			 }
@@ -68,6 +68,9 @@ public class WebController {
 	     public List<Pen> getPens(@RequestBody List<Pen> pens) {
 	    	 return pens;
 	     }
+	     
+	     
+	    
 	}
 	
 	
